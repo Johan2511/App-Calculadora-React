@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+
+
+html,
+body {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #ffffff 0%, #405733 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  padding-top: 2rem;
+  user-select: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.react-calculator {
+  position: relative;
+  margin: 0 auto;
+  width: 38rem;
+  background-color: #292f36;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 1rem ;
+
+}
+
+/*estructura de la calculadora*/
+button {
+    outline: none;
+    border: 0;
+    padding: 16px;
+    font-size: 20px;
+    line-height: 1;
+    background-color: transparent;
+    color: #7f7f7f;
+    transition: all 300ms;
+    border: 1px solid #0001;
+    border-radius:2rem ;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  
+}
+  
+  button:hover {
+    color: #00a3f5;
+    border: 1px solid #ffce5c22;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  
+  .result {
+    position: relative;
+    width: 32rem;
+    height: 8rem;
+    padding: 0.8rem;
+    margin-left: 3rem;
+    overflow: hidden;
+    background-color: rgba(55, 55, 55, 0.64);
+    font-size: 3.2rem;
+    line-height: 2;
+    color: #72d63c;
+    text-align: right;
+    direction: rtl;
+    white-space: nowrap;
+    box-sizing: border-box;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .functions button, .math-operations button {
+    display: inline-block;
+    margin-left: 2rem;
+    width: 80px;
+    height: 80px;
+    color: #d63c6b
   }
-}
+  
+  .functions button:hover, 
+  .math-operations button:hover {
+    color: #b696a0;
+  }
+  
+  .numbers {
+    width: 240px;
+    float: left;
+  }
+  
+  .numbers button {
+    display: block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    float: left;
+  }
+  
+  .numbers button:last-child {
+    width: 100%;
+    height: 7.5rem;
+  }
+  
+  .functions {
+    float: left;
+    width: 24rem;
+  }
